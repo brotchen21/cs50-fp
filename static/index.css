@@ -1,0 +1,548 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  color: #fff;
+  padding: 1rem 0;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: 1s;
+}
+
+.center-head {
+  font-weight: 600;
+  width: 100%;
+  padding: 190px 0 0 100px;
+}
+.center-head-element {
+  width: 40%;
+}
+.btn {
+  padding: 50px 0 50px 0;
+  width: 130px;
+}
+.btn span {
+  background-color: #cc9966;
+  padding: 10px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.convert {
+  width: 100%;
+  margin: 220px 0 20px 0;
+}
+
+div.topic-page-1 {
+  width: 700px;
+  font-size: 16px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 13px;
+}
+
+header nav ul li {
+  margin-left: 1rem;
+  position: relative;
+  display: flex;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav ul li::before {
+  content: "";
+  width: 0%;
+  background-color: #fff;
+  height: 2px;
+  bottom: 0;
+  position: absolute;
+  transition: 0.3s;
+}
+header nav ul li:hover::before {
+  width: 100%;
+}
+div.btn span {
+  transition: 0.3s;
+}
+
+div.btn span:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+#menu .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item p {
+  font-size: 14px;
+}
+.menu-item h3 {
+  padding: 30px 0 20px 0;
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.control-button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 50%;
+}
+button.control-button {
+  width: 8px;
+  height: 8px;
+}
+.control-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+footer {
+  padding-top: 50px;
+}
+footer div.container ul a {
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  line-height: 24px;
+}
+footer div.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer div.container + div.container {
+  margin-top: 100px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.social svg {
+  color: #000;
+}
+.social img + img {
+  color: #000;
+  margin-left: 10px;
+}
+.hotline {
+  font-size: 13px;
+}
+.footer-bottom {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #e8e8e8;
+}
+.main-order {
+  padding: 10px 0 100px 0;
+}
+.coffee-order {
+  font-size: 14px;
+  width: 93%;
+  margin-bottom: 50px;
+}
+.slideProduct button {
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.slideProduct button + button {
+  margin-left: 2px;
+}
+.conver-slide-button {
+  display: flex;
+  margin: 20px 18px 20px 0;
+  justify-content: flex-end;
+}
+.slider-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider,
+.slider-2,
+.slider-3,
+.slider-4,
+.slider-5,
+.slider-6 {
+  display: flex;
+  transition: transform 1s ease;
+  justify-content: space-between;
+}
+
+.slide,
+.slide-2,
+.slide-3,
+.slide-4,
+.slide-5,
+.slide-6 {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.slide img,
+.slide-2 img,
+.slide-3 img,
+.slide-4 img,
+.slide-5 img,
+.slide-6 img {
+  width: 250px;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.slide:hover,
+.slide-2:hover,
+.slide-3:hover,
+.slide-4:hover,
+.slide-5:hover,
+.slide-6:hover {
+  width: 253px;
+  box-shadow: 0 0 2px 0 black;
+}
+
+.product + .product {
+  margin-left: 30px;
+}
+.product {
+  width: 33.33%;
+}
+.nav-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.nav-btn:focus {
+  outline: none;
+}
+.name-price {
+  margin-top: 20px;
+}
+.complex-background {
+  width: 100%;
+  height: 560px;
+  background-image: url("https://rangrangcoffee.watacorp.com/wp-content/uploads/2021/09/RR-Banner-SUB-scaled.jpeg"); /* Đường dẫn đến hình ảnh nền */
+  background-size: cover; /* Điều chỉnh kích thước hình nền để bao phủ toàn bộ phần tử */
+  background-repeat: no-repeat; /* Hình nền không lặp lại */
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền với độ trong suốt */
+}
+.complex-topic,
+.complex-topic-2 {
+  margin: 10% 0 10% 0;
+  width: 35%;
+}
+.complex-topic-2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.complex-topic button,
+.complex-topic-2 button {
+  padding: 10px 30px 10px 30px;
+  font-size: 16px;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+  background-color: #cc9966;
+  transition: 0.3s;
+  color: #fff;
+}
+.complex-topic button:hover,
+.complex-topic-2 button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.complex-background-2 {
+  width: 100%;
+  height: 300px;
+  background-image: url("https://rangrangcoffee.watacorp.com/wp-content/uploads/2021/09/RR-Banner-SUB2-scaled.jpeg"); /* Đường dẫn đến hình ảnh nền */
+  background-size: cover; /* Điều chỉnh kích thước hình nền để bao phủ toàn bộ phần tử */
+  background-repeat: no-repeat; /* Hình nền không lặp lại */
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền với độ trong suốt */
+  display: flex;
+  align-items: center;
+}
+.complex-background-2 p {
+  text-align: center;
+}
+.choose-coffee {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.btn-choose-coffee {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 20px 10px 20px;
+}
+
+.btn-choose-coffee.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  transition: 0.5s;
+}
+.choose-coffee::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+.menu-sub {
+  width: 22%;
+  padding: 20px;
+  border: 1px solid #333;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subcription {
+  color: rgb(68, 68, 68);
+  padding: 0 0 100px 0;
+  position: relative;
+}
+
+.subcription::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.bg-item-1 {
+  width: 247x;
+  height: 130px;
+  background-image: url("https://rangrangcoffee.watacorp.com/wp-content/uploads/2021/06/RRN5.jpg"); /* Đường dẫn đến hình ảnh nền */
+  background-size: cover; /* Điều chỉnh kích thước hình nền để bao phủ toàn bộ phần tử */
+  background-repeat: no-repeat; /* Hình nền không lặp lại */
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền với độ trong suốt */
+  display: flex;
+}
+.sub-item button {
+  padding: 10px 30px 10px 30px;
+  font-size: 16px;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+  background-color: #cc9966;
+  transition: 0.3s;
+  color: #fff;
+  width: 100%;
+  margin-top: 10px;
+}
+.sub-item span,
+h2,
+p {
+  padding-bottom: 20px;
+}
+
+.sub-item button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.topic-4 {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+.element-4 + .element-4-2 {
+  margin-left: 130px;
+}
+
+.topic-4 p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.topic-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 100px 0;
+}
+div.reg-pagkage {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-item + .menu-item {
+  margin: 0 0 2rem 10rem;
+}
+center img + img {
+  margin-left: 20px;
+}
+.Coffeshop {
+  padding: 50px 0 100px 0;
+}
+.center-head-element font {
+  font-size: 32px;
+}
+.item-container,
+.item-container-2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.social a + a {
+  margin-left: 30px;
+}
+.element-4 img {
+  width: 364.88px;
+}
+.element-4-2 img {
+  width: 364.88px;
+}
+.complex-topic h4 {
+  font-size: 32px;
+  font-weight: 600;
+}
+.complex-topic p {
+  padding: 10px 0 10px 0;
+  font-size: 20px;
+  font-weight: 200;
+}
+.navigation {
+  display: none;
+}
+.btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.dk-1 {
+  width: 55%;
+  margin: 0;
+}
+center h2 {
+  margin: 0;
+  padding: 10px;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  background-color: #e8e8e8;
+  justify-content: space-between;
+  padding: 10px 50px 10px 50px;
+  margin: 0 100px 0 0;
+}
+.menu a li {
+  font-size: 25px;
+  font-weight: 1000;
+  cursor: pointer;
+}
+.menu a {
+  text-decoration: none;
+  color: rgb(83, 56, 44);
+}

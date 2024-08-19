@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Coffee Shop</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="webOrder.html">Menu </a></li>
+            <li><a href="dangKyGoi.html ">Đăng Ký Gói</a></li>
+            <li><a href="thuongHieu.html">Thương Hiệu</a></li>
+            <li><a href="login.html">Đăng Nhập</a></li>
+            <li><a href="reg.html">Đăng Ký</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container">
+        <div class="center-head">
+          <div class="center-head-element">
+            <p><font>S-Coffee</font></p>
+            <p>
+              <font>Hơi thở hiện đại trong từng tách coffee </font>
+            </p>
+          </div>
+          <div class="btn">
+            <a href="dangKyGoi.html">
+              <span>
+                Đăng ký
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-right"
+                  viewBox="0 0 16 16"
+                  style="margin-left: 10px"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div class="convert">
+            <div class="controls">
+              <center>
+                <button
+                  class="control-button"
+                  onclick="currentSlide(1)"
+                ></button>
+                <button
+                  class="control-button"
+                  onclick="currentSlide(2)"
+                ></button>
+                <button
+                  class="control-button"
+                  onclick="currentSlide(3)"
+                ></button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section style="color: rgb(83, 56, 44)">
+      <div class="main-order">
+        <div class="container">
+          <ul class="menu">
+            <a href="FREEZE.HTML#section1"><li>FREEZE</li></a>
+            <a href="NGUYENBAN.HTML#section2"><li>NGUYÊN BẢN</li></a>
+            <a href="DACBIET.HTML#section3"><li>ĐẶC BIỆT</li></a>
+            <a href="CAPHE.HTML#section4"><li>CÀ PHÊ</li></a>
+            <a href="TRA.HTML#section5"><li>TRÀ</li></a>
+            <a href="KHAC.HTML#section6"><li>KHÁC</li></a>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="coffee-order" id="section3">
+            <h1 style="font-size: 22px">DÒNG CÀ PHÊ ĐẶC BIỆT</h1>
+            <div class="slideProduct">
+              <div class="conver-slide-button">
+                <button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-caret-left-fill"
+                    viewBox="0 0 16 16"
+                    id="prev-3"
+                    class="nav-btn"
+                  >
+                    <path
+                      d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                    />
+                  </svg>
+                </button>
+                <button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-caret-right-fill"
+                    viewBox="0 0 16 16"
+                    id="next-3"
+                    class="nav-btn"
+                  >
+                    <path
+                      d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-list">
+                <div class="slider-container">
+                  <div class="slider-wrapper">
+                    <div class="slider-3">
+                      <div class="product">
+                        <div class="slide-3">
+                          <img
+                            src="https://www.highlandscoffee.com.vn/vnt_upload/product/HLCPOSTOFFICE_DRAFT/PNG_FINAL/3_MENU_NGUYEN_BAN/thumbs/270_crop_Phin_Sua_Da.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="name-price">
+                          <center>
+                            <h3>PHIN CULI ĐEN ĐÁ</h3>
+                            <p>Giá: <b>49,000 VNĐ</b></p>
+                          </center>
+                        </div>
+                      </div>
+                      <div class="product">
+                        <div class="slide-3">
+                          <img
+                            src="https://www.highlandscoffee.com.vn/vnt_upload/product/HLCPOSTOFFICE_DRAFT/PNG_FINAL/3_MENU_NGUYEN_BAN/thumbs/270_crop_Phin_Den_Da.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="name-price">
+                          <center>
+                            <h3>CITRUS COFFEE DETONIC</h3>
+                            <p>Giá: <b>89,000 VNĐ</b></p>
+                          </center>
+                        </div>
+                      </div>
+                      <div class="product">
+                        <div class="slide-3">
+                          <img
+                            src="https://www.highlandscoffee.com.vn/vnt_upload/product/HLCPOSTOFFICE_DRAFT/PNG_FINAL/1_SPECIALTY_COFFEE/thumbs/270_crop_Citrus_Cafe_De_Tonic.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="name-price">
+                          <center>
+                            <h3>COLD BREW MILK FOAM</h3>
+                            <p>Giá: <b>89,000 VNĐ</b></p>
+                          </center>
+                        </div>
+                      </div>
+                      <div class="product">
+                        <div class="slide-3">
+                          <img
+                            src="https://www.highlandscoffee.com.vn/vnt_upload/product/HLCPOSTOFFICE_DRAFT/PNG_FINAL/1_SPECIALTY_COFFEE/thumbs/270_crop_Cold_Brew_Milk_Foam.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="name-price">
+                          <center>
+                            <h3>FREEZE SÔ-CÔ-LA</h3>
+                            <p>Giá: <b>89,000 VNĐ</b></p>
+                          </center>
+                        </div>
+                      </div>
+                      <div class="product">
+                        <div class="slide-3">
+                          <img
+                            src="https://www.highlandscoffee.com.vn/vnt_upload/product/HLCPOSTOFFICE_DRAFT/PNG_FINAL/1_SPECIALTY_COFFEE/thumbs/270_crop_Cold_Brew.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="name-price">
+                          <center>
+                            <h3>CARAMEL PHIN FREEZE</h3>
+                            <p>Giá: <b>89,000 VNĐ</b></p>
+                          </center>
+                        </div>
+                      </div>
+                      <div class="product">
+                        <div class="slide-3">
+                          <img
+                            src="https://www.highlandscoffee.com.vn/vnt_upload/product/HLCPOSTOFFICE_DRAFT/PNG_FINAL/1_SPECIALTY_COFFEE/thumbs/270_crop_PhinDi_Cassia.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="name-price">
+                          <center>
+                            <h3>CLASSIC PHIN FREEZE</h3>
+                            <p>Giá: <b>89,000 VNĐ</b></p>
+                          </center>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <footer>
+      <div class="container">
+        <div class="item-container">
+          <div class="footer-top-item">
+            <ul>
+              <h5>Hỗ trợ</h5>
+              <a href=""><li>Hướng dẫn đặt hàng</li></a>
+              <a href=""><li>Câu hỏi thường gặp</li></a>
+              <a href=""><li>Phương thức vận chuyển</li></a>
+              <a href=""> <li>Chính sách thanh toán</li></a>
+            </ul>
+          </div>
+
+          <div class="footer-top-item">
+            <ul>
+              <h5>Coffee Shop Subcribe</h5>
+              <a href=""><li>Gói cà phê định kỳ</li></a>
+            </ul>
+          </div>
+          <div class="footer-top-item">
+            <h5>Hãy theo dõi chúng tôi</h5>
+            <div class="social">
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  class="bi bi-instagram"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                  />
+                </svg>
+              </a>
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  class="bi bi-facebook"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-top-item">
+            <center><h5>Phương thức thanh toán</h5></center>
+            <div class="social">
+              <img
+                src="https://wegocoffee.com/img/payments/ic_internet_banking.svg"
+                alt=""
+              />
+              <img
+                src="https://wegocoffee.com/img/payments/ic_momo.svg"
+                alt=""
+              />
+              <img
+                src="https://wegocoffee.com/img/payments/ic_vnpay.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="footer-top-item">
+            <ul>
+              <h5>Công ty</h5>
+              <a href=""><li>Về chúng tôi</li></a>
+              <a href=""><li>Thương hiệu</li></a>
+              <a href=""><li>Công việc</li></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

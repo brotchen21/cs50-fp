@@ -1,0 +1,322 @@
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  .center-head {
+    padding: 20px;
+  }
+  div.center-head-element {
+    width: 100%;
+  }
+  .convert {
+    padding: 0;
+    margin-top: 0;
+  }
+  div.topic-page-1 {
+    width: 100%;
+  }
+  div.reg-pagkage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-item + .menu-item {
+    margin: 50px 0 0 0;
+  }
+  .menu-item {
+    width: 100%;
+    padding: 30px;
+  }
+  .btn {
+    padding: 10px;
+  }
+  .container center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  center img + img {
+    margin: 10px 0 0 0;
+  }
+  .Coffeshop {
+    padding: 0;
+  }
+  .Coffeshop center h2 {
+    padding: 0;
+    margin: 0;
+  }
+  .controls center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .controls center button + button {
+    margin-left: 10px;
+  }
+  .center-head-element font {
+    font-size: 24px;
+  }
+  .center-head-element p {
+    margin: 0;
+    padding: 0;
+  }
+  .convert {
+    margin-top: 100px;
+  }
+  .item-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 cột với kích thước bằng nhau */
+    gap: 30px; /* Khoảng cách giữa các phần tử */
+    padding: 10px;
+  }
+  .item-container-2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 3 cột với kích thước bằng nhau */
+  }
+  .social a + a {
+    margin-left: 10px;
+  }
+  .coffee-order {
+    width: 100%;
+    padding: 10px;
+  }
+  .product {
+    width: 100%;
+  }
+  .product + .product {
+    margin-left: 0;
+  }
+  .slider-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .slider-wrapper {
+    width: 244px;
+  }
+  .topic-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  div.element-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .element-4-2 img {
+    width: 200px;
+    margin-top: 100px;
+    margin-right: 120px;
+  }
+  .element-4 img {
+    width: 200px;
+  }
+  .complex-background {
+    width: 100%;
+  }
+  .complex-background-2 {
+    width: 100%;
+  }
+  .complex-topic {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .complex-topic-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .menu-sub {
+    width: 90%;
+  }
+  .subcription {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .center-head {
+    padding: 20px;
+  }
+  div.center-head-element {
+    width: 100%;
+  }
+  .convert {
+    padding: 0;
+    margin-top: 0;
+  }
+  div.topic-page-1 {
+    width: 100%;
+  }
+  div.reg-pagkage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-item + .menu-item {
+    margin: 50px 0 0 0;
+  }
+  .menu-item {
+    width: 100%;
+    padding: 30px;
+  }
+  .btn {
+    padding: 10px;
+  }
+  .container center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  center img + img {
+    margin: 10px 0 0 0;
+  }
+  .Coffeshop {
+    padding: 0;
+  }
+  .Coffeshop center h2 {
+    padding: 0;
+    margin: 0;
+  }
+  .controls center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .controls center button + button {
+    margin-left: 10px;
+  }
+  .center-head-element font {
+    font-size: 24px;
+  }
+  .center-head-element p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .convert {
+    margin-top: 100px;
+  }
+  .item-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 cột với kích thước bằng nhau */
+    gap: 30px; /* Khoảng cách giữa các phần tử */
+    padding: 10px;
+  }
+  .item-container-2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 3 cột với kích thước bằng nhau */
+  }
+  .social a + a {
+    margin-left: 10px;
+  }
+  .coffee-order {
+    width: 100%;
+    padding: 10px;
+  }
+  .product {
+    width: 100%;
+  }
+  .product + .product {
+    margin-left: 0;
+  }
+  .slider-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .slider-wrapper {
+    width: 244px;
+  }
+  .topic-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  div.element-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .element-4-2 img {
+    width: 200px;
+    margin-top: 100px;
+    margin-right: 120px;
+  }
+  .element-4 img {
+    width: 200px;
+  }
+  .complex-background {
+    width: 100%;
+  }
+  .complex-background-2 {
+    width: 100%;
+  }
+  .complex-topic {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .complex-topic-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .menu-sub {
+    width: 90%;
+  }
+  .subcription {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  .menu-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .dk-1 {
+    width: 100%;
+    margin-top: 10px;
+  }
+  /* ......................................................................................................................... */
+  .checkbtn {
+    cursor: pointer;
+  }
+}
