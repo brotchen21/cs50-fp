@@ -1,5 +1,5 @@
 let slideIndex = 0;
-const images = ["./img/bg-1.png", "./img//bg-2.png", "./img//bg-3.png"];
+const images = ["/static/img/bg-1.png", "static/img/bg-2.png", "static/img/bg-3.png"];
 let autoSlideInterval;
 function showSlides(index) {
   let header = document.querySelector("header");
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 if (window.innerWidth < 780) {
   let slideIndex = 0;
-  const images = ["./img//bg-1.png", "./img//bg-2.png", "./img//bg-3.png"];
+  const images = ["/static/img/bg-1.png", "static/img/bg-2.png", "static/img/bg-3.png"];
   let autoSlideInterval;
   function showSlides(index) {
     let header = document.querySelector("header");
