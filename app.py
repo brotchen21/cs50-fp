@@ -89,7 +89,14 @@ def login():
         return redirect("/")
     else:
         return render_template("login.html")
+    
+@app.route("/webOrder.html", methods=["GET", "POST"])
+def webOrder():
+    return render_template("webOrder.html")
 
+@app.route("/thuongHieu.html", methods=["GET", "POST"])
+def thuongHieu():
+    return render_template("thuongHieu.html")
 
 if __name__ == "__main__":
     app.run(debug=True) 
