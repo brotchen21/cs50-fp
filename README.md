@@ -1,4 +1,1 @@
-"# cs50-fp" 
-"# cs50-fp" 
-"# cs50-fp" 
-"# cs50-fp" 
+Final project for CS50.
