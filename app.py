@@ -98,5 +98,30 @@ def webOrder():
 def thuongHieu():
     return render_template("thuongHieu.html")
 
+@app.route("/caphe.html", methods =["GET", "POST"])
+def caphe():
+    return render_template("caphe.html")
+
+@app.route("/tra.html", methods =["GET", "POST"])
+def tra():
+    return render_template("tra.html")
+
+@app.route("/freeze.html", methods =["GET", "POST"])
+def freeze():
+    return render_template("freeze.html")
+
+@app.route("/nguyenban.html", methods =["GET", "POST"])
+def nguyenban():
+    return render_template("nguyenban.html")
+
+@app.route("/dacbiet.html", methods =["GET", "POST"])
+def dacbiet():
+    return render_template("dacbiet.html")
+
+@app.route("/khac.html", methods =["GET", "POST"])
+def khac():
+    return render_template("khac.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True) 
