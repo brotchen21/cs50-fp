@@ -170,3 +170,21 @@ if (window.innerWidth < 780) {
     });
   });
 }
+
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', function() {
+    const productId = this.getAttribute('data-product-id');
+    fetch(`/add_to_cart/${productId}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        alert('Product added to cart!');
+      } else {
+        alert('Failed to add product to cart.');
+      }
+    });
+  });
+});

@@ -1,5 +1,6 @@
 import os
 import sqlite3
+import uuid
 from flask import Flask, render_template, request, redirect, session, flash, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -121,6 +122,41 @@ def dacbiet():
 @app.route("/khac.html", methods =["GET", "POST"])
 def khac():
     return render_template("khac.html")
+
+@app.route("/add_to_cart/<int:product_id>", methods= ["POST"])
+def add_to_cart(product_id):
+    if "session_id" not in session:
+        session["session_id"] = str(uuid.uuid4())
+    session_id = session["session_id"]
+
+    conn = get_db_connection()
+    cart_item = conn.execute("SELECT * FROM cartItem WHERE session_id = ? AND product_id = ?", (session_id, product_id)).fetchone()
+    if cart_item:
+        #If item already exists
+        conn.execute("UPDATE cartItem SET quantity = quantity + 1 WHERE id = ?", (cart_item["id"],))
+    else:
+        conn.execute("INSERT INTO cartItem (product_id, quantity, session_id) VALUES (?, ?, ?)", (product_id, 1, session_id))
+    
+    conn.commit()
+    conn.close()
+    flash("Item added to cart", "success")
+    return redirect(url_for('webOrder'))
+    return jsonify(success=True)
+
+
+@app.route("/cart.html", methods= ["GET"])
+def cart():
+    if "session_id" not in session:
+        return render_template("cart.html", cart_items=[], total_price= 0)
+    session_id = session["session_id"]
+
+    conn = get_db_connection()
+    cart_items = conn.execute("SELECT product.name, product.price, cartItem.quantity FROM cartItem JOIN product ON cartItem.product_id = product.id WHERE cartItem.session_id = ?", (session_id,)).fetchall()
+
+    total_price = sum(item["price"] * item["quantity"] for item in cart_items)
+    conn.close()
+
+    return render_template("cart.html", cart_items=cart_items, total_price=total_price)
 
 
 if __name__ == "__main__":

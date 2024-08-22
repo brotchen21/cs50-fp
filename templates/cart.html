@@ -1,0 +1,11 @@
+<h2>Cart</h2>
+{% if cart_items %}
+<ul>
+    {% for item in cart_items %}
+        <li>{{ item["name"] }} - {{ item["quantity"] *  item["price"] }}</li>
+        {% endfor %}
+</ul>
+<p>Total: {{ total_price }}</p>
+{% else %}
+    <p>Add items to your cart</p>
+{% endif %}
