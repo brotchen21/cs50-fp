@@ -144,19 +144,24 @@ def add_to_cart(product_id):
     return jsonify(success = True)
 
 
-@app.route("/cart.html", methods= ["GET"])
+@app.route("/cart.html", methods=["GET"]) 
 def cart():
     if "session_id" not in session:
-        return render_template("cart.html", cart_items=[], total_price= 0)
+        return render_template("cart.html", cart_items=[], total_price=0)
+    
     session_id = session["session_id"]
 
     conn = get_db_connection()
-    cart_items = conn.execute("SELECT product.name, product.price, cartItem.quantity FROM cartItem JOIN product ON cartItem.product_id = product.id WHERE cartItem.session_id = ?", (session_id,)).fetchall()
+    cart_items = conn.execute("""SELECT product.id AS product_id, product.name, product.price, cartItem.quantity 
+        FROM cartItem 
+        JOIN product ON cartItem.product_id = product.id 
+        WHERE cartItem.session_id = ?""",(session_id,)).fetchall()
 
     total_price = sum(item["price"] * item["quantity"] for item in cart_items)
     conn.close()
 
     return render_template("cart.html", cart_items=cart_items, total_price=total_price)
+
 
 @app.route("/remove_items/<int:product_id>", methods=["POST"])
 def remove_items(product_id):

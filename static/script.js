@@ -188,6 +188,7 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
     });
   });
 });
+
 function removeItems(productId) {
   console.log(productId);
   fetch(`/remove_items/${productId}`, {
