@@ -1,11 +1,18 @@
+{% extends "index.html" %}
+
+{% block main %}
 <h2>Cart</h2>
 {% if cart_items %}
 <ul>
     {% for item in cart_items %}
-        <li>{{ item["name"] }} - {{ item["quantity"] *  item["price"] }}</li>
+        <li>{{ item["name"] }} - {{ '%.3f' | format(item["quantity"] *  item["price"]) }}</li>
+        <button onclick="removeItems('{{ item.product_id }}')">Remove items from cart</button>
+
         {% endfor %}
 </ul>
-<p>Total: {{ total_price }}</p>
+<p>Total: {{ '%.3f' | format(total_price) }} VND</p>
 {% else %}
     <p>Add items to your cart</p>
 {% endif %}
+
+{% endblock %}

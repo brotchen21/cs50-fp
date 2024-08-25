@@ -316,11 +316,11 @@ footer div.container + div.container {
 .complex-background {
   width: 100%;
   height: 560px;
-  background-image: url("https://rangrangcoffee.watacorp.com/wp-content/uploads/2021/09/RR-Banner-SUB-scaled.jpeg"); /* Đường dẫn đến hình ảnh nền */
-  background-size: cover; /* Điều chỉnh kích thước hình nền để bao phủ toàn bộ phần tử */
-  background-repeat: no-repeat; /* Hình nền không lặp lại */
+  background-image: url("https://rangrangcoffee.watacorp.com/wp-content/uploads/2021/09/RR-Banner-SUB-scaled.jpeg"); 
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Màu nền với độ trong suốt */
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 .complex-topic,
 .complex-topic-2 {
@@ -352,11 +352,11 @@ footer div.container + div.container {
 .complex-background-2 {
   width: 100%;
   height: 300px;
-  background-image: url("https://rangrangcoffee.watacorp.com/wp-content/uploads/2021/09/RR-Banner-SUB2-scaled.jpeg"); /* Đường dẫn đến hình ảnh nền */
-  background-size: cover; /* Điều chỉnh kích thước hình nền để bao phủ toàn bộ phần tử */
-  background-repeat: no-repeat; /* Hình nền không lặp lại */
+  background-image: url("https://rangrangcoffee.watacorp.com/wp-content/uploads/2021/09/RR-Banner-SUB2-scaled.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Màu nền với độ trong suốt */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
 }
@@ -424,11 +424,11 @@ footer div.container + div.container {
 .bg-item-1 {
   width: 247x;
   height: 130px;
-  background-image: url("https://rangrangcoffee.watacorp.com/wp-content/uploads/2021/06/RRN5.jpg"); /* Đường dẫn đến hình ảnh nền */
-  background-size: cover; /* Điều chỉnh kích thước hình nền để bao phủ toàn bộ phần tử */
-  background-repeat: no-repeat; /* Hình nền không lặp lại */
+  background-image: url("https://rangrangcoffee.watacorp.com/wp-content/uploads/2021/06/RRN5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Màu nền với độ trong suốt */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
 }
 .sub-item button {

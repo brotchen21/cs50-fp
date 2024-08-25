@@ -1,7 +1,7 @@
 import os
 import sqlite3
 import uuid
-from flask import Flask, render_template, request, redirect, session, flash, url_for
+from flask import Flask, render_template, request, redirect, session, flash, jsonify, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
@@ -10,6 +10,7 @@ app.secret_key = 'guy75dt645dfytgus'
 def get_db_connection():
     conn = sqlite3.connect('database.db')
     conn.row_factory = sqlite3.Row
+    conn.text_factory = str 
     return conn
 
 
@@ -140,8 +141,7 @@ def add_to_cart(product_id):
     conn.commit()
     conn.close()
     flash("Item added to cart", "success")
-    return redirect(url_for('webOrder'))
-    return jsonify(success=True)
+    return jsonify(success = True)
 
 
 @app.route("/cart.html", methods= ["GET"])
@@ -157,6 +157,19 @@ def cart():
     conn.close()
 
     return render_template("cart.html", cart_items=cart_items, total_price=total_price)
+
+@app.route("/remove_items/<int:product_id>", methods=["POST"])
+def remove_items(product_id):
+    print(f"Removing product with ID: {product_id}")
+    session_id = session.get("session_id")
+
+    conn = get_db_connection()
+    conn.execute("DELETE FROM cartItem WHERE session_id = ? and product_id = ?", (session_id, product_id))
+    conn.commit()
+    conn.close()
+    flash("Item removed", "success")
+    return jsonify(success=True)
+
 
 
 if __name__ == "__main__":
