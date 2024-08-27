@@ -1,18 +1,56 @@
-{% extends "index.html" %}
-
-{% block main %}
-<h2>Cart</h2>
-{% if cart_items %}
-<ul>
-    {% for item in cart_items %}
-        <li>{{ item["name"] }} - {{ '%.3f' | format(item["quantity"] *  item["price"]) }}</li>
-        <button onclick="removeItems('{{ item.product_id }}')">Remove items from cart</button>
-
-        {% endfor %}
-</ul>
-<p>Total: {{ '%.3f' | format(total_price) }} VND</p>
-{% else %}
-    <p>Add items to your cart</p>
-{% endif %}
-
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cart.css') }}">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <header style="background-size: cover;">
+      <div class="container">
+        <div class="header-nav">
+          <h1>Coffee Shop</h1>
+          <div class="navigation">
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+          </div>
+        </div>
+        <nav>
+          <ul class="menu-heading">
+            <li><a href="/">Trang Chủ</a></li>
+            <li><a href="webOrder.html">Menu </a></li>
+            <li><a href="thuongHieu.html">Thương Hiệu</a></li>
+            <li><a href="login.html">Đăng Nhập</a></li>
+            <li><a href="reg.html">Đăng Ký</a></li>
+            <li><a href="cart.html">Giỏ hàng</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </head>
+  <body>
+    <section id="cart">
+        <h2>Cart</h2>
+        {% if cart_items %}
+        <ul>
+            {% for item in cart_items %}
+            <li class="item-container">
+              <span>{{ item["name"] }} - {{ '%.3f' | format(item["quantity"] *  item["price"]) }}</span>
+              <button onclick="removeItems('{{ item.product_id }}')">Remove items from cart</button>          
+          </li>    
+            {% endfor %}
+        </ul>
+        <p>Total: {{ '%.3f' | format(total_price) }} VND</p>
+        <button onclick="completeOrder()">Complete Order</button>
+        {% else %}
+            <p>Add items to your cart</p>
+        {% endif %}
+    </section>
+  </body>
+  <script src="{{ url_for('static', filename='cart.js') }}"></script>
+</html>

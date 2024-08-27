@@ -3,6 +3,7 @@ import sqlite3
 import uuid
 from flask import Flask, render_template, request, redirect, session, flash, jsonify, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
+from functools import wraps
 
 app = Flask(__name__)
 app.secret_key = 'guy75dt645dfytgus'
@@ -22,6 +23,21 @@ def after_request(response):
     response.headers["Expires"] = 0
     response.headers["Pragma"] = "no-cache"
     return response
+
+def login_required(f):
+    """
+    Decorate routes to require login.
+
+    https://flask.palletsprojects.com/en/latest/patterns/viewdecorators/
+    """
+
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'user_id' not in session:
+            return redirect(url_for('login'))
+        return f(*args, **kwargs)
+    return decorated_function
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -78,6 +94,7 @@ def login():
 
         if user: 
             print(f"User found: {user}")
+            print(f"Password check: {check_password_hash(user['hash'], password)}")
         else: 
             print("No user found")
         #Ensure username and password is correct
@@ -144,7 +161,8 @@ def add_to_cart(product_id):
     return jsonify(success = True)
 
 
-@app.route("/cart.html", methods=["GET"]) 
+@app.route("/cart.html", methods=["GET"])
+@login_required
 def cart():
     if "session_id" not in session:
         return render_template("cart.html", cart_items=[], total_price=0)

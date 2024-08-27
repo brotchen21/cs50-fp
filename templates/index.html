@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+  </head>
+  <body>
     <header style="background-image: url('/static/img/bg-1.png'); background-size: cover;">
       <div class="container">
         <div class="header-nav">
@@ -42,31 +44,19 @@
           <div class="convert">
             <div class="controls">
               <center>
-                <button
-                  class="control-button"
-                  onclick="currentSlide(1)"
-                ></button>
-                <button
-                  class="control-button"
-                  onclick="currentSlide(2)"
-                ></button>
-                <button
-                  class="control-button"
-                  onclick="currentSlide(3)"
-                ></button>
+                <button class="control-button" onclick="currentSlide(1)"></button>
+                <button class="control-button" onclick="currentSlide(2)"></button>
+                <button class="control-button" onclick="currentSlide(3)"></button>
               </center>
             </div>
           </div>
         </div>
       </div>
     </header>
-  </head>
-  <body>
-    {% block main %}
     <section id="home">
       <div class="container"></div>
     </section>
-
+    {% block main %}
     <section id="about">
       <div class="container topic-page-1">
         <center>
